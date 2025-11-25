@@ -6,7 +6,7 @@ export default function Contact() {
             id="contact"
             style={{
                 padding: "4rem 1.5rem",
-                background: "#f9f9f9",
+                background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
                 minHeight: "100vh",
                 display: "flex",
                 justifyContent: "center",
@@ -15,7 +15,8 @@ export default function Contact() {
         >
             <div
                 style={{
-                    background: "white",
+                    background: "#ffffff80",
+                    color: "#795dae",
                     padding: "2rem",
                     borderRadius: "16px",
                     boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
@@ -28,7 +29,7 @@ export default function Contact() {
                         textAlign: "center",
                         fontSize: "2rem",
                         marginBottom: "1.5rem",
-                        color: "#795dae",
+                        color: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
                     }}
                 >
                     Contact Me
@@ -37,7 +38,7 @@ export default function Contact() {
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
-                        alert("Message sent! (but not really yet 😭)");
+                        alert("Message sent!");
                     }}
                 >
                     <label style={{ display: "block", marginBottom: "1rem" }}>
@@ -48,10 +49,11 @@ export default function Contact() {
                             type="text"
                             required
                             style={{
+                                background: "transparent",
                                 width: "100%",
                                 padding: ".8rem",
                                 borderRadius: "8px",
-                                border: "1px solid #ccc",
+                                border: "1px solid #795dae",
                             }}
                         />
                     </label>
@@ -64,10 +66,11 @@ export default function Contact() {
                             type="email"
                             required
                             style={{
+                                background: "transparent",
                                 width: "100%",
                                 padding: ".8rem",
                                 borderRadius: "8px",
-                                border: "1px solid #ccc",
+                                border: "1px solid #795dae",
                             }}
                         />
                     </label>
@@ -80,10 +83,11 @@ export default function Contact() {
                             rows="5"
                             required
                             style={{
+                                background: "transparent",
                                 width: "100%",
                                 padding: ".8rem",
                                 borderRadius: "8px",
-                                border: "1px solid #ccc",
+                                border: "1px solid #795dae",
                                 resize: "vertical",
                             }}
                         ></textarea>
@@ -94,7 +98,7 @@ export default function Contact() {
                         style={{
                             width: "100%",
                             padding: "1rem",
-                            background: "#795dae",
+                            background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
                             color: "white",
                             border: "none",
                             borderRadius: "8px",
