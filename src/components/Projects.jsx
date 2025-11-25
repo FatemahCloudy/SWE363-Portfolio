@@ -3,16 +3,25 @@ import React from "react";
 export default function Projects() {
     const projects = [
         {
+            id: 1,
             title: "Portfolio Website",
-            description: "A personal website built with React and Vite.",
+            desc: "A clean and responsive personal portfolio.",
+            img: "/assets/images/portfolio.png",
+            category: "web",
         },
         {
+            id: 2,
             title: "Todo App",
-            description: "A simple but beautiful task manager built in React.",
+            desc: "A simple task manager with local storage.",
+            img: "/assets/images/todo.png",
+            category: "app",
         },
         {
-            title: "API Dashboard",
-            description: "A dashboard that displays data from a public API.",
+            id: 3,
+            title: "Memory of Place",
+            desc: "Save and share memories about places.",
+            img: "/assets/images/memory.png",
+            category: "app",
         },
     ];
 
@@ -20,28 +29,28 @@ export default function Projects() {
         <section
             id="projects"
             style={{
-                padding: "4rem 1.5rem",
-                background: "#f9f9f9",
-                minHeight: "100vh",
+                padding: "5rem 2rem",
+                background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                color: "white",
             }}
         >
             <h2
                 style={{
-                    textAlign: "center",
-                    fontSize: "2.5rem",
+                    fontSize: "2.2rem",
+                    fontWeight: "800",
                     marginBottom: "2rem",
-                    color: "#795dae",
+                    textAlign: "center",
                 }}
             >
-                My Projects
+                Projects
             </h2>
 
             <div
                 style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-                    gap: "1.5rem",
-                    maxWidth: "900px",
+                    gap: "2rem",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                    maxWidth: "1100px",
                     margin: "0 auto",
                 }}
             >
@@ -49,21 +58,50 @@ export default function Projects() {
                     <div
                         key={p.id}
                         style={{
-                            background: "white",
-                            padding: "1.5rem",
-                            borderRadius: "12px",
+                            background: "#ffffff80",
+                            color: "#333",
+                            borderRadius: "16px",
                             overflow: "hidden",
-                            boxShadow: "0 4px 10px rgba(0,0,0,0.05)",
-                            transition: "transform 0.25s ease",
+                            boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+                            transition: "transform 0.3s ease, box-shadow 0.3s ease",
                             cursor: "pointer",
                         }}
-                        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
-                        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.transform = "scale(1.04)";
+                            e.currentTarget.style.boxShadow =
+                                "0 15px 40px rgba(0,0,0,0.25)";
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.transform = "scale(1)";
+                            e.currentTarget.style.boxShadow =
+                                "0 10px 30px rgba(0,0,0,0.15)";
+                        }}
                     >
-                        <h3 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
-                            {p.title}
-                        </h3>
-                        <p style={{ fontSize: "1rem", color: "#555" }}>{p.description}</p>
+                        <img
+                            src={p.img}
+                            alt={p.title}
+                            style={{
+                                width: "100%",
+                                height: "180px",
+                                objectFit: "cover",
+                            }}
+                        />
+
+                        <div style={{ padding: "1.2rem" }}>
+                            <h3 style={{ fontSize: "1.2rem", fontWeight: "700" }}>
+                                {p.title}
+                            </h3>
+
+                            <p
+                                style={{
+                                    marginTop: "0.5rem",
+                                    color: "#555",
+                                    fontSize: "0.95rem",
+                                }}
+                            >
+                                {p.desc}
+                            </p>
+                        </div>
                     </div>
                 ))}
             </div>
