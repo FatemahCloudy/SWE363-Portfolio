@@ -45,15 +45,20 @@ export default function Projects() {
                     margin: "0 auto",
                 }}
             >
-                {projects.map((p, i) => (
+                {projects.map((p) => (
                     <div
-                        key={i}
+                        key={p.id}
                         style={{
                             background: "white",
                             padding: "1.5rem",
                             borderRadius: "12px",
-                            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+                            overflow: "hidden",
+                            boxShadow: "0 4px 10px rgba(0,0,0,0.05)",
+                            transition: "transform 0.25s ease",
+                            cursor: "pointer",
                         }}
+                        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                     >
                         <h3 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
                             {p.title}
