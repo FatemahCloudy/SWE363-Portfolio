@@ -4,6 +4,7 @@ import Hero from "./components/Hero.jsx";
 import Projects from "./components/Projects.jsx";
 import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
     return (
@@ -17,6 +18,8 @@ export default function App() {
             <Skills />
 
             <Contact />
+
+            <Footer />
         </div>
     );
 }
