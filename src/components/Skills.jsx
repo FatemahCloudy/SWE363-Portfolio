@@ -17,9 +17,9 @@ export default function Skills() {
             id="skills"
             style={{
                 padding: "4rem 1.5rem",
-                background: "#795dae",
-                color: "white",
-                minHeight: "100vh",
+                background: "whitesmoke",
+                color: "#795dae",
+                minHeight: "70vh",
             }}
         >
             <h2
@@ -45,14 +45,18 @@ export default function Skills() {
                     <div
                         key={i}
                         style={{
-                            background: "rgba(255,255,255,0.15)",
+                            background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                            color: "white",
                             padding: "1rem 1.2rem",
                             borderRadius: "12px",
                             textAlign: "center",
                             fontSize: "1.1rem",
                             backdropFilter: "blur(4px)",
                             boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                            transition: "transform 0.25s ease",
                         }}
+                        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                     >
                         {skill}
                     </div>
