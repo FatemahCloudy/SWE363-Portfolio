@@ -25,7 +25,9 @@ export default function Navbar() {
                 top: 0,
                 zIndex: 100,
                 width: "100%",
-                background: "white",
+                background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                opacity: 0.8,
+                backdropFilter: "blur(10px)",
                 padding: "1rem 2rem",
                 display: "flex",
                 justifyContent: "space-between",
@@ -41,7 +43,7 @@ export default function Navbar() {
                 style={{
                     fontWeight: "bold",
                     fontSize: "1.2rem",
-                    color: "#795dae",
+                    color: "white",
                     cursor: "pointer",
                 }}
                 onClick={() => scrollTo("hero")}
@@ -65,7 +67,7 @@ export default function Navbar() {
                             background: "transparent",
                             cursor: "pointer",
                             fontSize: "1rem",
-                            color: "#444",
+                            color: "white",
                             padding: "0.3rem 0.5rem",
                             borderRadius: "6px",
                             transition: "0.2s",
