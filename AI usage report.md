@@ -31,6 +31,7 @@ This document provides a transparent overview of how AI was used during the crea
 - Final UI/UX design choices and creative adjustments.
 - Testing and deployment configurations on GitHub Pages.
 - Fixing and improving the base AI-generated code.
+- Connecting MongoDB with React (I referred to the demo and other resources for guidance)
 
 ---
 
