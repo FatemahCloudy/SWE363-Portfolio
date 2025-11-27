@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/style.css";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ export default function Contact() {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("/backend/server.js", {
+            const response = await fetch("./backend/server.js", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +48,7 @@ export default function Contact() {
             id="contact"
             style={{
                 padding: "4rem 1.5rem",
-                background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                background: "linear-gradient(160deg, var(--primary-colour) 0%, var(--secondary-colour) 100%)",
                 minHeight: "100vh",
                 display: "flex",
                 justifyContent: "center",
@@ -57,7 +58,7 @@ export default function Contact() {
             <div
                 style={{
                     background: "#ffffff80",
-                    color: "#795dae",
+                    color: "var(--primary-colour)",
                     padding: "2rem",
                     borderRadius: "16px",
                     boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
@@ -70,7 +71,7 @@ export default function Contact() {
                         textAlign: "center",
                         fontSize: "2rem",
                         marginBottom: "1.5rem",
-                        color: "#795dae",
+                        color: "var(--primary-colour)",
                     }}
                 >
                     Contact Me
@@ -92,7 +93,7 @@ export default function Contact() {
                                 width: "100%",
                                 padding: ".8rem",
                                 borderRadius: "8px",
-                                border: "1px solid #795dae",
+                                border: "1px solid var(--primary-colour)",
                             }}
                         />
                     </label>
@@ -112,7 +113,7 @@ export default function Contact() {
                                 width: "100%",
                                 padding: ".8rem",
                                 borderRadius: "8px",
-                                border: "1px solid #795dae",
+                                border: "1px solid var(--primary-colour)",
                             }}
                         />
                     </label>
@@ -132,7 +133,7 @@ export default function Contact() {
                                 width: "100%",
                                 padding: ".8rem",
                                 borderRadius: "8px",
-                                border: "1px solid #795dae",
+                                border: "1px solid var(--primary-colour)",
                                 resize: "vertical",
                             }}
                         ></textarea>
@@ -146,8 +147,8 @@ export default function Contact() {
                             padding: "1rem",
                             background: isSubmitting 
                                 ? "#cccccc" 
-                                : "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
-                            color: "white",
+                                : "linear-gradient(160deg, var(--primary-colour) 0%, var(--secondary-colour) 100%)",
+                            color: "var(--card-colour)",
                             border: "none",
                             borderRadius: "8px",
                             fontSize: "1.1rem",
