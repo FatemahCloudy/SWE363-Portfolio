@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/style.css";
 
 export default function Projects() {
     const projects = [
@@ -30,7 +31,7 @@ export default function Projects() {
             id="projects"
             style={{
                 padding: "5rem 2rem",
-                background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                background: "linear-gradient(160deg, var(--primary-colour) 0%, var(--secondary-colour) 100%)",
                 color: "white",
             }}
         >
@@ -59,7 +60,7 @@ export default function Projects() {
                         key={p.id}
                         style={{
                             background: "#ffffff80",
-                            color: "#333",
+                            color: "var(dark-colour)",
                             borderRadius: "16px",
                             overflow: "hidden",
                             boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
@@ -95,7 +96,7 @@ export default function Projects() {
                             <p
                                 style={{
                                     marginTop: "0.5rem",
-                                    color: "#555",
+                                    color: "var(--dark-colour)",
                                     fontSize: "0.95rem",
                                 }}
                             >

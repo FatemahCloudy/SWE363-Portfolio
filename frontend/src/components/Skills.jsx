@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/style.css";
 
 export default function Skills() {
     const skills = [
@@ -18,7 +19,7 @@ export default function Skills() {
             style={{
                 padding: "4rem 1.5rem",
                 background: "whitesmoke",
-                color: "#795dae",
+                color: "var(--primary-colour)",
                 minHeight: "70vh",
             }}
         >
@@ -45,7 +46,7 @@ export default function Skills() {
                     <div
                         key={i}
                         style={{
-                            background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                            background: "linear-gradient(160deg, var(--primary-colour) 0%, var(--secondary-colour) 100%)",
                             color: "white",
                             padding: "1rem 1.2rem",
                             borderRadius: "12px",

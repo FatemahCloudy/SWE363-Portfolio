@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/style.css";
 
 export default function Footer() {
     return (
         <footer
             style={{
-                background: "#795dae",
+                background: "var(--primary-colour)",
                 color: "white",
                 padding: "1.5rem 1rem",
                 textAlign: "center",
