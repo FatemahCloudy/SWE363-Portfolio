@@ -1,18 +1,71 @@
-# React + Vite
+# My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, responsive, and interactive **personal portfolio website** built using **HTML, CSS, and JavaScript**.  
+The site highlights creativity, interactivity, and clean design while demonstrating front-end development skills.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Description
 
-## React Compiler
+This portfolio website is designed to present personal and professional information in a dynamic, visually appealing way.  
+It includes multiple interactive features that enhance the user experience:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Features
+- **About Me** section with a personal introduction and profile image  
+- **Projects** section with hover animations and fixed-size cards  
+- **Skills** section presented as colourful “bubbles” of different sizes  
+- **Contact Form** with real-time validation and a confirmation message
+- **Fade-in animations** triggered by scroll using the Intersection Observer API  
+- **Automatic Dark/Light Mode** that matches the user’s system settings  
+- **responsive layout** for both desktop and mobile screens  
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/portfolio-website.git
+   ```
+
+2. **Navigate into the project folder**
+   ```bash
+   cd portfolio-website
+   ```
+
+3. **Run the project**
+   - Simply open `index.html` in your browser, or  
+   - Use a local development server:
+     ```bash
+     python -m http.server 8000
+     ```
+     Then visit: [http://localhost:8000](http://localhost:8000)
+
+---
+
+## AI Usage Summary
+
+This project was partially developed with the help of **AI tools (ChatGPT)** for:
+- Generating base templates for HTML, CSS, and JavaScript  
+- Assistance in deploying interactive features (pop-up forms, fade-in animations)  
+- Assistance on how to make a dark mode option.  
+
+A detailed explanation of AI’s role can be found in **ai-usage-report.md**.
+
+---
+
+## Live Deployment
+
+The live version is hosted on **GitHub Pages**:  
+ [https://fatemahcloudy.github.io/SWE363_Assignment-1/](https://fatemahcloudy.github.io/SWE363_Assignment-1/)
+
+---
+
+## Technologies Used
+- **HTML** for structure  
+- **CSS** for design, gradients, and transitions  
+- **JavaScript (ES6)** for interactivity and animations  
+- **Intersection Observer API** for scroll-based animations  
+- **GitHub Pages** for deployment  
+
+---
