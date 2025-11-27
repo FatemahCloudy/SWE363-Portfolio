@@ -1,6 +1,3 @@
-Sure! Here's your updated README in **Markdown** format, ready to use:
-
-````markdown
 # My Portfolio Website
 
 A sleek, responsive, and interactive **personal portfolio website** built using **React, Express, and MongoDB**.  
