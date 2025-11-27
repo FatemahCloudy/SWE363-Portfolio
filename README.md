@@ -1,23 +1,28 @@
+Sure! Here's your updated README in **Markdown** format, ready to use:
+
+````markdown
 # My Portfolio Website
 
-A sleek, responsive, and interactive **personal portfolio website** built using **HTML, CSS, and JavaScript**.  
-The site highlights creativity, interactivity, and clean design while demonstrating front-end development skills.
+A sleek, responsive, and interactive **personal portfolio website** built using **React, Express, and MongoDB**.  
+The site highlights creativity, interactivity, and clean design while demonstrating **full-stack development skills**.
 
 ---
 
 ## Project Description
 
-This portfolio website is designed to present personal and professional information in a dynamic, visually appealing way.  
-It includes multiple interactive features that enhance the user experience:
+This portfolio website presents personal and professional information dynamically and interactively.  
+It leverages a **modern full-stack architecture** to provide a smooth, responsive user experience:
 
 ### Features
-- **About Me** section with a personal introduction and profile image  
-- **Projects** section with hover animations and fixed-size cards  
-- **Skills** section presented as colourful “bubbles” of different sizes  
-- **Contact Form** with real-time validation and a confirmation message
+- **About Me** section with personal introduction and profile image  
+- **Projects** section with hover animations and dynamically rendered project cards  
+- **Skills** section presented as colourful, responsive, small cards  
+- **Contact Form** connected to a backend API with real-time validation and MongoDB storage  
 - **Fade-in animations** triggered by scroll using the Intersection Observer API  
 - **Automatic Dark/Light Mode** that matches the user’s system settings  
-- **responsive layout** for both desktop and mobile screens  
+- **Responsive layout** for both desktop and mobile screens  
+- **Express backend** handling contact form submissions and other API endpoints  
+- **MongoDB database** storing contact form messages and optional project data  
 
 ---
 
@@ -25,47 +30,62 @@ It includes multiple interactive features that enhance the user experience:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/portfolio-website.git
-   ```
+   git clone https://github.com/FatemahCloudy/SWE363-Portfolio.git
+````
 
 2. **Navigate into the project folder**
+
    ```bash
    cd portfolio-website
    ```
 
-3. **Run the project**
-   - Simply open `index.html` in your browser, or  
-   - Use a local development server:
-     ```bash
-     python -m http.server 8000
-     ```
-     Then visit: [http://localhost:8000](http://localhost:8000)
+3. **Install dependencies for both frontend and backend**
+
+   ```bash
+   # Frontend
+   cd client
+   npm install
+
+   # Backend
+   cd ../server
+   npm install
+   ```
+
+4. **Run the development servers**
+
+   ```bash
+   # Backend
+   cd server
+   npm run dev
+
+   # Frontend
+   cd ../client
+   npm start
+   ```
+
+   Visit [http://localhost:5000](http://localhost:5000) to see the site.
 
 ---
 
 ## AI Usage Summary
 
 This project was partially developed with the help of **AI tools (ChatGPT)** for:
-- Generating base templates for HTML, CSS, and JavaScript  
-- Assistance in deploying interactive features (pop-up forms, fade-in animations)  
-- Assistance on how to make a dark mode option.  
+
+* Generating base templates for React components and Express routes
+* Assistance in implementing interactive features (fade-in animations, dark mode, forms)
 
 A detailed explanation of AI’s role can be found in **ai-usage-report.md**.
 
 ---
 
-## Live Deployment
-
-The live version is hosted on **GitHub Pages**:  
- [https://fatemahcloudy.github.io/SWE363_Assignment-1/](https://fatemahcloudy.github.io/SWE363_Assignment-1/)
-
----
-
 ## Technologies Used
-- **HTML** for structure  
-- **CSS** for design, gradients, and transitions  
-- **JavaScript (ES6)** for interactivity and animations  
-- **Intersection Observer API** for scroll-based animations  
-- **GitHub Pages** for deployment  
+
+* **React** for the frontend UI and interactivity
+* **CSS** for styling, gradients, and transitions
+* **JavaScript (ES6)** for logic and animations
+* **Express.js** for backend API endpoints
+* **MongoDB** for database storage
+* **Intersection Observer API** for scroll-based animations
+* **Node.js & npm** for project management and server execution
 
 ---
