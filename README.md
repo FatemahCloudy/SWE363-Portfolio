@@ -26,19 +26,19 @@ It leverages a **modern full-stack architecture** to provide a smooth, responsiv
 ## Setup Instructions
 
 1. **Clone the repository**
-   ```bash
+```
    git clone https://github.com/FatemahCloudy/SWE363-Portfolio.git
 ````
 
 2. **Navigate into the project folder**
 
-   ```bash
+   ```
    cd portfolio-website
    ```
 
 3. **Install dependencies for both frontend and backend**
 
-   ```bash
+   ```
    # Frontend
    cd client
    npm install
@@ -50,7 +50,7 @@ It leverages a **modern full-stack architecture** to provide a smooth, responsiv
 
 4. **Run the development servers**
 
-   ```bash
+   ```
    # Backend
    cd server
    npm run dev
