@@ -1,6 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert("Failed to send message. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section
             id="contact"
@@ -29,24 +70,22 @@ export default function Contact() {
                         textAlign: "center",
                         fontSize: "2rem",
                         marginBottom: "1.5rem",
-                        color: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                        color: "#795dae",
                     }}
                 >
                     Contact Me
                 </h2>
 
-                <form
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        alert("Message sent!");
-                    }}
-                >
+                <form onSubmit={handleSubmit}>
                     <label style={{ display: "block", marginBottom: "1rem" }}>
-            <span style={{ display: "block", marginBottom: ".5rem" }}>
-              Name
-            </span>
+                        <span style={{ display: "block", marginBottom: ".5rem" }}>
+                            Name
+                        </span>
                         <input
                             type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
                             required
                             style={{
                                 background: "transparent",
@@ -59,11 +98,14 @@ export default function Contact() {
                     </label>
 
                     <label style={{ display: "block", marginBottom: "1rem" }}>
-            <span style={{ display: "block", marginBottom: ".5rem" }}>
-              Email
-            </span>
+                        <span style={{ display: "block", marginBottom: ".5rem" }}>
+                            Email
+                        </span>
                         <input
                             type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             required
                             style={{
                                 background: "transparent",
@@ -76,10 +118,13 @@ export default function Contact() {
                     </label>
 
                     <label style={{ display: "block", marginBottom: "1rem" }}>
-            <span style={{ display: "block", marginBottom: ".5rem" }}>
-              Message
-            </span>
+                        <span style={{ display: "block", marginBottom: ".5rem" }}>
+                            Message
+                        </span>
                         <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
                             rows="5"
                             required
                             style={{
@@ -95,19 +140,23 @@ export default function Contact() {
 
                     <button
                         type="submit"
+                        disabled={isSubmitting}
                         style={{
                             width: "100%",
                             padding: "1rem",
-                            background: "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
+                            background: isSubmitting 
+                                ? "#cccccc" 
+                                : "linear-gradient(160deg, #795dae 0%, #cf7fdb 100%)",
                             color: "white",
                             border: "none",
                             borderRadius: "8px",
                             fontSize: "1.1rem",
-                            cursor: "pointer",
+                            cursor: isSubmitting ? "not-allowed" : "pointer",
                             marginTop: ".5rem",
+                            opacity: isSubmitting ? 0.7 : 1,
                         }}
                     >
-                        Send
+                        {isSubmitting ? "Sending..." : "Send"}
                     </button>
                 </form>
             </div>
