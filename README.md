@@ -1,18 +1,88 @@
-# React + Vite
+# My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, responsive, and interactive **personal portfolio website** built using **React, Express, and MongoDB**.  
+The site highlights creativity, interactivity, and clean design while demonstrating **full-stack development skills**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Description
 
-## React Compiler
+This portfolio website presents personal and professional information dynamically and interactively.  
+It leverages a **modern full-stack architecture** to provide a smooth, responsive user experience:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Features
+- **About Me** section with personal introduction and profile image  
+- **Projects** section with hover animations and dynamically rendered project cards  
+- **Skills** section presented as colourful, responsive, small cards  
+- **Contact Form** connected to a backend API with real-time validation and MongoDB storage  
+- **Fade-in animations** triggered by scroll using the Intersection Observer API  
+- **Automatic Dark/Light Mode** that matches the user’s system settings  
+- **Responsive layout** for both desktop and mobile screens  
+- **Express backend** handling contact form submissions and other API endpoints  
+- **MongoDB database** storing contact form messages and optional project data  
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository**
+```
+   git clone https://github.com/FatemahCloudy/SWE363-Portfolio.git
+````
+
+2. **Navigate into the project folder**
+
+   ```
+   cd portfolio-website
+   ```
+
+3. **Install dependencies for both frontend and backend**
+
+   ```
+   # Frontend
+   cd client
+   npm install
+
+   # Backend
+   cd ../server
+   npm install
+   ```
+
+4. **Run the development servers**
+
+   ```
+   # Backend
+   cd server
+   npm run dev
+
+   # Frontend
+   cd ../client
+   npm start
+   ```
+
+   Visit [http://localhost:5000](http://localhost:5000) to see the site.
+
+---
+
+## AI Usage Summary
+
+This project was partially developed with the help of **AI tools (ChatGPT)** for:
+
+* Generating base templates for React components and Express routes
+* Assistance in implementing interactive features (fade-in animations, dark mode, forms)
+
+A detailed explanation of AI’s role can be found in **ai-usage-report.md**.
+
+---
+
+## Technologies Used
+
+* **React** for the frontend UI and interactivity
+* **CSS** for styling, gradients, and transitions
+* **JavaScript (ES6)** for logic and animations
+* **Express.js** for backend API endpoints
+* **MongoDB** for database storage
+* **Intersection Observer API** for scroll-based animations
+* **Node.js & npm** for project management and server execution
+
+---
