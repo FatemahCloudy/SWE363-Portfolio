@@ -3,6 +3,7 @@ import "../styles/style.css";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [theme, setTheme] = useState('light');
 
     // Add a shadow when scrolling
     useEffect(() => {
@@ -13,6 +14,28 @@ export default function Navbar() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Initialize theme from localStorage or system preference
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (systemPrefersDark) {
+            setTheme('dark');
+        }
+    }, []);
+
+    // Apply theme to document
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+    };
 
     const scrollTo = (id) => {
         const el = document.getElementById(id);
@@ -52,8 +75,9 @@ export default function Navbar() {
                 Fatemah Almarhoon
             </div>
 
-            {/* Right side — Links */}
-            <div style={{ display: "flex", gap: "1.2rem" }}>
+            {/* Right side — Links & Theme Toggle */}
+            <div style={{ display: "flex", gap: "1.2rem", alignItems: "center" }}>
+                {/* Navigation Links */}
                 {[
                     { label: "Home", id: "hero" },
                     { label: "Projects", id: "projects" },
@@ -77,12 +101,41 @@ export default function Navbar() {
                             e.target.style.color = "var(--primary-colour)";
                         }}
                         onMouseLeave={(e) => {
-                            e.target.style.color = "var(--dark-colour)";
+                            e.target.style.color = "var(--card-colour)";
                         }}
                     >
                         {item.label}
                     </button>
                 ))}
+
+                {/* Theme Toggle Button */}
+                <button
+                    onClick={toggleTheme}
+                    style={{
+                        border: "none",
+                        background: "var(--card-colour)",
+                        color: "var(--primary-colour)",
+                        cursor: "pointer",
+                        padding: "0.5rem",
+                        borderRadius: "50%",
+                        width: "40px",
+                        height: "40px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "1.2rem",
+                        transition: "all 0.3s ease",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                    }}
+                    onMouseEnter={(e) => {
+                        e.target.style.transform = "scale(1.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                        e.target.style.transform = "scale(1)";
+                    }}
+                >
+                    {theme === 'light' ? '🌙' : '☀️'}
+                </button>
             </div>
         </nav>
     );

@@ -5,6 +5,7 @@ export default function Hero() {
     return (
         <section
             id="hero"
+            className="bg-root"
             style={{
                 padding: "6rem 2rem",
                 display: "flex",
@@ -12,6 +13,7 @@ export default function Hero() {
                 justifyContent: "space-between",
                 gap: "3rem",
                 flexWrap: "wrap",
+                // backgroundColor: "var(--bg-colour)" - REMOVED, using className instead
             }}
         >
             {/* About me */}
@@ -55,7 +57,7 @@ export default function Hero() {
                             padding: "0.8rem 1.6rem",
                             fontSize: "1rem",
                             borderRadius: "10px",
-                            background: "linear-gradient(90deg,var(--primary-colour),var(--secondary-colour))",
+                            background: "linear-gradient(90deg, var(--primary-colour), var(--secondary-colour))",
                             color: "white",
                             border: "none",
                             cursor: "pointer",
@@ -82,7 +84,7 @@ export default function Hero() {
                             fontSize: "1rem",
                             borderRadius: "10px",
                             border: "2px solid var(--primary-colour)",
-                            background: "white",
+                            background: "var(--bg-colour)",
                             color: "var(--primary-colour)",
                             cursor: "pointer",
                             transition: "transform 0.25s ease",
@@ -114,8 +116,7 @@ export default function Hero() {
                         position: "absolute",
                         width: "260px",
                         height: "260px",
-                        background:
-                            "linear-gradient(120deg, rgba(121,93,174,0.35), rgba(207,127,219,0.35))",
+                        background: "linear-gradient(120deg, rgba(121, 93, 174, 0.35), rgba(207, 127, 219, 0.35))",
                         borderRadius: "50%",
                         filter: "blur(40px)",
                         zIndex: 0,
