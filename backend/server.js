@@ -40,7 +40,7 @@ async function initializeDatabase() {
         }, 1000);
 
     } catch {
-        console.log('⚠️  Database connection failed (expected for demo)');
+        console.log('Error: Database connection failed');
     }
 }
 
